@@ -20,20 +20,17 @@ apt-get install openssh-client -y;
 
 #Instalando programas úteis.
 
-echo "Instalando o git, gnome-tweak-tool, numix-gtk-theme e numix icon circle"
+echo "Instalando o git"
 sudo apt-get install git -y;
-cd /home/;sudo chmod 777 .;cd;
+
+echo "Instalando numix-gtk-theme e numix icon circle"
+sudo apt install numix-gtk-theme -y;
+sudo add-apt-repository ppa:numix/ppa;
+sudo apt-get update;
+sudo apt-get install numix-icon-theme-circle -y;
+
+echo "Instalando gnome-tweak-tool"
 sudo apt-get install gnome-tweak-tool -y;
-sudo mkdir /tmp/dotfile/
-sudo chmod -R 777 /tmp/dotfile/;
-cd /tmp/dotfile
-sudo mkdir numix; cd numix
-git clone https://github.com/cldx/numix-gtk-theme
-git clone https://github.com/numixproject/numix-icon-theme
-git clone https://github.com/numixproject/numix-icon-theme-circle
-sudo mv numix-gtk-theme /usr/share/themes
-sudo mv numix-icon-theme/Numix/ /usr/share/icons
-sudo mv numix-icon-theme-circle/Numix-Circle/ /usr/share/icons; cd -
 
 echo "Instalando o curl"
 sudo apt-get install curl;
