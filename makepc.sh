@@ -79,6 +79,9 @@ sudo apt-get install spotify-client -y;
 echo "Instalando LUKUS para criptografia de pendrive"
 sudo apt-get install cryptsetup -y;
 
+#Configurando o .bashrc
+curl -L https://raw.githubusercontent.com/jeanrafaellourenco/scripts/master/bashrc > .bashrc
+
 clear;
 echo -e " \033[1;33m  **COPIE ESTA CHAVE E ADICIONE NA SUA CONTA NO GITHUB**\033[0m";
 echo "";
