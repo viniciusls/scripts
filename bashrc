@@ -131,11 +131,7 @@ alias limparcache='sudo rm -rf /home/cloud/var/log/cache ; sudo mkdir /home/clou
 alias criarbkplocal="echo '------Tentando criar a pasta Backup------' ; sudo mkdir /home/cloud-db/backup ; sudo chmod 777 -R /home/cloud-db/backup ; echo '------Iniciando criação------' ; gbak -backup -v -garbage -limbo -user sysdba -password masterkey 127.0.0.1:/home/cloud-db/backup/base.fdb /home/cloud-db/backup/backup.gbk 2>> /home/cloud-db/backup/log-criarbkp.txt ; sudo chmod 777 -R /home/cloud-db"
 alias permissaototal="echo '------Permissões em pastas do projeto------' ; sudo chmod 777 -R /home/cloud/ ; sudo chmod 777 -R /home/cloud-db/ ; sudo chmod 777 -R /home/apps/; sudo chmod 777 -R /home/session/;"
 alias reiniciarprojeto="echo '------Reiniciando Apache------' ; sudo /etc/init.d/apache2 restart ; echo '------Reiniciando Firebird------' ; sudo /etc/init.d/firebird2.5-superclassic restart"
-alias conectar="ssh $USER@192.168.0.165;"
-alias cmysql="mysql --user=root --password=root -h 127.0.0.1"
-alias startdocker="sudo docker-compose -f docker-compose-php7.yml up --force-recreate"
-alias restartdocker="sudo docker-compose -f docker-compose-php7.yml restart --force-recreate"
-alias rdesktop="rdesktop -g 1750x1004 $1"
+
 #------------FIM ALIAS SL-------------------------
 #
 #
@@ -143,4 +139,8 @@ alias rdesktop="rdesktop -g 1750x1004 $1"
 #------------ALIAS PERSONALIZADO-------------------
 alias cache="sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches;sudo free -mh;"
 alias atualizar="sudo apt-get update && sudo apt-get upgrade --yes --force-yes;"
+alias conectar="ssh $USER@192.168.0.165;"
+alias cmysql="mysql --user=root --password=root -h 127.0.0.1"
+alias rdesktop="rdesktop -g 1750x1004 $1"
+
 #------------FIM ALIAS PERSONALIZADO----------------
