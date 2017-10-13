@@ -73,6 +73,18 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2C19886;
 sudo apt-get update;
 sudo apt-get install spotify-client -y;
 
+echo "Instalando o editor de imagens Shutter"
+sudo apt-add-repository ppa:shutter/ppa;
+sudo apt-get update;
+sudo apt-get install shutter -y;
+
+echo "Instalando o Simple screen recorder"
+sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder;
+sudo apt-get update;
+sudo apt-get install simplescreenrecorder -y;
+sudo apt-get install simplescreenrecorder-lib:i386 -y;
+
+
 echo "Instalando LUKUS para criptografia de pendrive"
 sudo apt-get install cryptsetup -y;
 
