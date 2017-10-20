@@ -138,7 +138,7 @@ alias reiniciarprojeto="echo '------Reiniciando Apache------' ; sudo /etc/init.d
 #
 #------------ALIAS PERSONALIZADO-------------------
 alias cache="sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches;sudo free -mh;"
-alias atualizar="sudo apt-get update && sudo apt-get upgrade --yes --force-yes;"
+alias atualizar="sudo apt-get update && sudo apt-get upgrade -y"
 alias conectar="ssh $USER@192.168.0.165;"
 alias cmysql="mysql --user=root --password=root -h 127.0.0.1"
 alias rdesktop="rdesktop -g 1750x1004 $1"
