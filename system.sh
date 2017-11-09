@@ -36,7 +36,7 @@ Menu(){
       2) opcao2 ;;
       3) opcao3 ;;
       0) clear; echo -e "${BAlert}DESCONECTANDO DO SITEMA, AGUARDE..." ; sleep 3; clear; exit ;;
-      *) echo -e "${BAlert}Opcão desconhecida." ; sleep 2; clear; Menu ;;
+      *) echo -e "${BWarning}Opcão desconhecida." ; sleep 2; clear; Menu ;;
    esac
 }
 
