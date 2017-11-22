@@ -36,25 +36,25 @@ Menu(){
       2) opcao2 ;;
       3) opcao3 ;;
       0) clear; echo -e "${BAlert}DESCONECTANDO DO SITEMA, AGUARDE..." ; sleep 3; clear; exit ;;
-      *) echo -e "${BAlert}Opcão desconhecida." ; sleep 2; clear; Menu ;;
+      *) echo -e "${BWarning}Opcão desconhecida." ; sleep 2; clear; Menu ;;
    esac
 }
 
 #Escreva as funções abaixo:
 opcao1 (){
-  echo -e "${Alert}Executando a primeira opção"
+  echo -e "${BAlert}Executando a primeira opção"
   sleep 3; clear; Menu
   
 }
 
 opcao2 (){
-  echo -e "${Alert}Executando a segunda opção"
+  echo -e "${BAlert}Executando a segunda opção"
   sleep 3; clear; Menu
   
 }
 
 opcao3 (){
-  echo -e "${Alert}Executando a terceira opção"
+  echo -e "${BAlert}Executando a terceira opção"
   sleep 3; clear; Menu
   
 }
