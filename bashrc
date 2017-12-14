@@ -142,7 +142,10 @@ mysql -u root -proot -e "SET @@global.sql_mode=(SELECT REPLACE(@@global.sql_mode
 #------------ALIAS PERSONALIZADO-------------------
 alias cache="sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches;sudo free -mh;"
 alias atualizar="sudo apt-get update && sudo apt-get upgrade -y"
-alias conectar="ssh $USER@192.168.0.165;"
+alias conectar="ssh $USER@10.55.0.94;"
 alias cmysql="mysql --user=root --password=root -h 127.0.0.1"
 alias rdesktop="rdesktop -g 1750x1004 $1"
+alias guto="rdesktop -g 1750x1004 10.55.0.91"
+alias compilacao="rdesktop -g 1750x1004 10.55.0.92"
 #------------FIM ALIAS PERSONALIZADO----------------
+#mysql -u root -proot -e "SET @@global.sql_mode=(SELECT REPLACE(@@global.sql_mode, 'ONLY_FULL_GROUP_BY', ''));";clear
