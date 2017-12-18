@@ -74,7 +74,7 @@ sudo apt-get -f install;
 
 echo "Instalando spotify"
 sudo sh -c "echo 'deb http://repository.spotify.com stable non-free' >> /etc/apt/sources.list";
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2C19886;
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410
 sudo apt-get update;
 sudo apt-get install spotify-client -y;
 
