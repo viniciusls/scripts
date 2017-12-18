@@ -29,6 +29,11 @@ sudo add-apt-repository ppa:numix/ppa;
 sudo apt-get update;
 sudo apt-get install numix-icon-theme-circle -y;
 
+echo "Instalando arc-flatabulous-theme"
+sudo add-apt-repository ppa:noobslab/themes;
+sudo apt-get update;
+sudo apt-get install arc-flatabulous-theme
+
 echo "Instalando gnome-tweak-tool"
 sudo apt-get install gnome-tweak-tool -y;
 
