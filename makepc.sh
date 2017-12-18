@@ -93,6 +93,9 @@ sudo apt-get install simplescreenrecorder-lib:i386 -y;
 echo "Instalando LUKUS para criptografia de pendrive"
 sudo apt-get install cryptsetup -y;
 
+#Order type
+gsettings set org.gnome.nautilus.preferences default-sort-order type
+
 #Configurando o .bashrc
 curl -L https://raw.githubusercontent.com/jeanrafaellourenco/scripts/master/bashrc > .bashrc
 
