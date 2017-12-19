@@ -89,6 +89,9 @@ sudo apt-get update;
 sudo apt-get install simplescreenrecorder -y;
 sudo apt-get install simplescreenrecorder-lib:i386 -y;
 
+#Não desligar a tela de bloqueio
+sudo apt install caffeine -y
+
 
 echo "Instalando LUKUS para criptografia de pendrive"
 sudo apt-get install cryptsetup -y;
