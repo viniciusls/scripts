@@ -37,6 +37,9 @@ sudo apt-get install arc-flatabulous-theme
 echo "Instalando gnome-tweak-tool"
 sudo apt-get install gnome-tweak-tool -y;
 
+# chrome-gnome-shell instalando extensões pelo navegador
+sudo apt-get install chrome-gnome-shell -y
+
 echo "Instalando o curl"
 sudo apt-get install curl;
 
@@ -102,6 +105,13 @@ gsettings set org.gnome.nautilus.preferences default-sort-order type
 #Configurando o .bashrc
 curl -L https://raw.githubusercontent.com/jeanrafaellourenco/scripts/master/bashrc > .bashrc
 
+echo "DIGITE O E-MAIL DA SUA CONTA NO GIT";
+read email;
+echo "DIGITE SEU NOME";
+read nome;
+git config --global user.email "$email";
+git config --global user.name "$nome";
+
 clear;
 echo -e " \033[1;33m  **COPIE ESTA CHAVE E ADICIONE NA SUA CONTA NO GITHUB**\033[0m";
 echo "";
@@ -109,5 +119,3 @@ echo "";
 find /home/$USER/.ssh -name '*.pub' -exec cat {} \;
 echo "";
 echo -e " \033[1;33m No Github, vá em Settings, SSH and GPG Keys, clique em New SSH Key, cole o conteúdo da chave e salve. \033[0m";
-git config --global user.email "loginsocial@outlook.com";
-git config --global user.name "Jean Lourenço";
