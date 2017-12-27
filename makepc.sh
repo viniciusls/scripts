@@ -25,14 +25,19 @@ sudo apt-get install git -y;
 
 echo "Instalando numix-gtk-theme e numix icon circle"
 sudo apt install numix-gtk-theme -y;
-sudo add-apt-repository ppa:numix/ppa;
+sudo add-apt-repository ppa:numix/ppa -y;
 sudo apt-get update;
 sudo apt-get install numix-icon-theme-circle -y;
 
 echo "Instalando arc-flatabulous-theme"
-sudo add-apt-repository ppa:noobslab/themes;
+sudo add-apt-repository ppa:noobslab/themes -y;
 sudo apt-get update;
-sudo apt-get install arc-flatabulous-theme
+sudo apt-get install arc-flatabulous-theme -y;
+
+echo "Instalando flat-remix icons"
+sudo add-apt-repository ppa:daniruiz/flat-remix -y;
+sudo apt-get update;
+sudo apt-get install flat-remix -y;
 
 echo "Instalando gnome-tweak-tool"
 sudo apt-get install gnome-tweak-tool -y;
@@ -41,7 +46,7 @@ sudo apt-get install gnome-tweak-tool -y;
 sudo apt-get install chrome-gnome-shell -y
 
 echo "Instalando o curl"
-sudo apt-get install curl;
+sudo apt-get install curl -y;
 
 echo "Instalando mysql-client"
 sudo apt-get install mysql-client -y;
@@ -82,12 +87,12 @@ sudo apt-get update;
 sudo apt-get install spotify-client -y;
 
 echo "Instalando o editor de imagens Shutter"
-sudo apt-add-repository ppa:shutter/ppa;
+sudo apt-add-repository ppa:shutter/ppa -y;
 sudo apt-get update;
 sudo apt-get install shutter -y;
 
 echo "Instalando o Simple screen recorder"
-sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder;
+sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder -y;
 sudo apt-get update;
 sudo apt-get install simplescreenrecorder -y;
 sudo apt-get install simplescreenrecorder-lib:i386 -y;
@@ -99,7 +104,7 @@ sudo apt-get install simplescreenrecorder-lib:i386 -y;
 echo "Instalando LUKUS para criptografia de pendrive"
 sudo apt-get install cryptsetup -y;
 
-#Order type
+#Order type, ordenação de pastas e arquivos
 gsettings set org.gnome.nautilus.preferences default-sort-order type
 
 #Configurando o .bashrc
