@@ -10,7 +10,7 @@
 
   `mkdir -p /home/$USER/.java;`
 
-* 2- Baixe o java em :  [Clicando aqui](https://www.java.com/pt_BR/)
+* 2- Baixe o java em :  [Clicando aqui](https://www.java.com/pt_BR/download/linux_manual.jsp)
 
 * 3- Extraia o arquivo baixado, deve criar uma pasta com o nome da versão (jre1.8.0_101), e copie para dentro da pasta .java que voce criou.
 
