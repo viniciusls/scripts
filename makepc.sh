@@ -124,3 +124,26 @@ echo "";
 find /home/$USER/.ssh -name '*.pub' -exec cat {} \;
 echo "";
 echo -e " \033[1;33m No Github, vá em Settings, SSH and GPG Keys, clique em New SSH Key, cole o conteúdo da chave e salve. \033[0m";
+
+deletarPacotes() {
+    echo "Limpando pacotes...";
+
+    sudo apt-get auto-remove;
+    sudo apt-get auto-clean;
+    
+    # Adicionar novos pacotes que forem baixados via wget nesta lista
+    rm google-chrome-stable_current_amd64.deb;
+
+    echo "Pacotes removidos com sucesso!";
+}
+
+echo "Deseja excluir os pacotes baixados durante a instalação? [S/n] [padrão: n]"
+read isDelete
+
+if [ "$isDelete" = "S" ] || [ "$isDelete" = "s" ]; then
+    deletarPacotes
+else
+    echo "Ignorando remoção de pacotes.";
+fi
+
+echo "Concluído!";
