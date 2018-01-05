@@ -33,6 +33,7 @@ sudo apt-get update
 sudo apt-get install meld -y
 git config --global diff.tool meld
 git config --global difftool.prompt false
+gsettings set org.gnome.meld detect-encodings "['ISO-8859-1']"
 
 echo "Instalando numix-gtk-theme e numix icon circle"
 sudo apt install numix-gtk-theme -y;
