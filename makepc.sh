@@ -23,6 +23,17 @@ apt-get install openssh-client -y;
 echo "Instalando o git"
 sudo apt-get install git -y;
 
+
+#GIT MELD - Ferramenta de Diff Open Source para Git.
+#Para utilizar a ferramenta, navegue até a pasta do projeto e chame o meld junto ao Git ex:
+#cd /home/cloud; git meld
+
+echo "Instalando o git meld (diff)"
+sudo apt-get update
+sudo apt-get install meld -y
+git config --global diff.tool meld
+git config --global difftool.prompt false
+
 echo "Instalando numix-gtk-theme e numix icon circle"
 sudo apt install numix-gtk-theme -y;
 sudo add-apt-repository ppa:numix/ppa -y;
