@@ -124,28 +124,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#------------ALIAS SL---------------------------
-alias criarbkp='sudo cloud-init criarbkp'
-alias restaurarbkp='sudo cloud-init restaurarbkp'
-alias limparcache='sudo rm -rf /home/cloud/var/log/cache ; sudo mkdir /home/cloud/var/log/cache ; sudo chmod 777 -R /home/cloud/var/log/cache ; sudo rm -rf /home/cloud/public/scripts/min ; sudo mkdir /home/cloud/public/scripts/min ; sudo chmod 777 -R /home/cloud/public/scripts/min ; sudo /etc/init.d/varnish restart ; sudo rm -rf /home/apps/sign/Data/cache ; sudo chmod 777 -R /home/apps/sign/Data/ ; sudo rm -rf /home/apps/educacional/Data/cache ; sudo rm -rf /home/apps/imobiliaria/Data/cache'
-alias criarbkplocal="echo '------Tentando criar a pasta Backup------' ; sudo mkdir /home/cloud-db/backup ; sudo chmod 777 -R /home/cloud-db/backup ; echo '------Iniciando criação------' ; gbak -backup -v -garbage -limbo -user sysdba -password masterkey 127.0.0.1:/home/cloud-db/backup/base.fdb /home/cloud-db/backup/backup.gbk 2>> /home/cloud-db/backup/log-criarbkp.txt ; sudo chmod 777 -R /home/cloud-db"
-alias permissaototal="echo '------Permissões em pastas do projeto------' ; sudo chmod 777 -R /home/cloud/ ; sudo chmod 777 -R /home/cloud-db/ ; sudo chmod 777 -R /home/apps/; sudo chmod 777 -R /home/session/;"
-alias reiniciarprojeto="echo '------Reiniciando Apache------' ; sudo /etc/init.d/apache2 restart ; echo '------Reiniciando Firebird------' ; sudo /etc/init.d/firebird2.5-superclassic restart"
-#
-#sql mode on for ONLY_FULL_GROUP_BY (uso na sl)
-mysql -u root -proot -e "SET @@global.sql_mode=(SELECT REPLACE(@@global.sql_mode, 'ONLY_FULL_GROUP_BY', ''));";clear
 
-#------------FIM ALIAS SL-------------------------
-#
-#
-#
 #------------ALIAS PERSONALIZADO-------------------
 alias cache="sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches;sudo free -mh;"
 alias atualizar="sudo apt-get update && sudo apt-get upgrade -y"
-alias conectar="ssh $USER@10.55.0.94;"
-alias cmysql="mysql --user=root --password=root -h 127.0.0.1"
 alias rdesktop="rdesktop -g 1750x1004 $1"
-alias guto="rdesktop -g 1750x1004 10.55.0.91"
-alias compilacao="rdesktop -g 1750x1004 10.55.0.92"
 #------------FIM ALIAS PERSONALIZADO----------------
 #mysql -u root -proot -e "SET @@global.sql_mode=(SELECT REPLACE(@@global.sql_mode, 'ONLY_FULL_GROUP_BY', ''));";clear
