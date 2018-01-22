@@ -100,6 +100,7 @@ gsettings set org.gnome.nautilus.preferences default-sort-order type
 #Configurando o .bashrc
 curl -L https://raw.githubusercontent.com/jeanrafaellourenco/scripts/master/bashrc > .bashrc
 
+clear;
 echo -e " \033[1;34m **Deseja instalar temas e icones personalizado? (S/N)** \033[0m";
 read x 
 
@@ -114,7 +115,7 @@ if [[ "$x" == "S" ]] || [[ "$x" == "s" ]];
 fi;
 
 
-
+clear;
 echo -e " \033[1;34m **Deseja configurar sua conta do github? (S/N)** \033[0m";
 read x
 
