@@ -19,10 +19,10 @@
 	sudo apt-get install arc-flatabulous-theme -y;
   
   
-  echo "Instalando flat-remix icons"
-  sudo add-apt-repository ppa:daniruiz/flat-remix -y;
-  sudo apt-get update;
-  sudo apt-get install flat-remix -y;
+  	echo "Instalando flat-remix icons"
+  	sudo add-apt-repository ppa:daniruiz/flat-remix -y;
+  	sudo apt-get update;
+  	sudo apt-get install flat-remix -y;
 	
 	# chrome-gnome-shell instalando extensões pelo navegador
 	sudo apt-get install chrome-gnome-shell -y
