@@ -35,28 +35,6 @@ git config --global diff.tool meld
 git config --global difftool.prompt false
 gsettings set org.gnome.meld detect-encodings "['ISO-8859-1']"
 
-echo "Instalando numix-gtk-theme e numix icon circle"
-sudo apt install numix-gtk-theme -y;
-sudo add-apt-repository ppa:numix/ppa -y;
-sudo apt-get update;
-sudo apt-get install numix-icon-theme-circle -y;
-
-echo "Instalando arc-flatabulous-theme"
-sudo add-apt-repository ppa:noobslab/themes -y;
-sudo apt-get update;
-sudo apt-get install arc-flatabulous-theme -y;
-
-echo "Instalando flat-remix icons"
-sudo add-apt-repository ppa:daniruiz/flat-remix -y;
-sudo apt-get update;
-sudo apt-get install flat-remix -y;
-
-echo "Instalando gnome-tweak-tool"
-sudo apt-get install gnome-tweak-tool -y;
-
-# chrome-gnome-shell instalando extensões pelo navegador
-sudo apt-get install chrome-gnome-shell -y
-
 echo "Instalando o curl"
 sudo apt-get install curl -y;
 
@@ -122,40 +100,45 @@ gsettings set org.gnome.nautilus.preferences default-sort-order type
 #Configurando o .bashrc
 curl -L https://raw.githubusercontent.com/jeanrafaellourenco/scripts/master/bashrc > .bashrc
 
-echo "DIGITE O E-MAIL DA SUA CONTA NO GIT";
-read email;
-echo "DIGITE SEU NOME";
-read nome;
-git config --global user.email "$email";
-git config --global user.name "$nome";
+echo -e " \033[1;34m **Deseja instalar temas e icones personalizado? (S/N)** \033[0m";
+read x 
 
-clear;
-echo -e " \033[1;33m  **COPIE ESTA CHAVE E ADICIONE NA SUA CONTA NO GITHUB**\033[0m";
-echo "";
-#cat /home/$USER/.ssh/*.pub;
-find /home/$USER/.ssh -name '*.pub' -exec cat {} \;
-echo "";
-echo -e " \033[1;33m No Github, vá em Settings, SSH and GPG Keys, clique em New SSH Key, cole o conteúdo da chave e salve. \033[0m";
+if [[ "$x" == "S" ]] || [[ "$x" == "s" ]];
+    then
 
-deletarPacotes() {
-    echo "Limpando pacotes...";
+    echo "Personalizando aparência"
+    wget https://raw.githubusercontent.com/jeanrafaellourenco/scripts/master/pcbonito.sh;
+    sudo chmod +x pcbonito.sh;
+    bash pcbonito.sh;
 
-    sudo apt-get auto-remove;
-    sudo apt-get auto-clean;
-    
-    # Adicionar novos pacotes que forem baixados via wget nesta lista
-    rm google-chrome-stable_current_amd64.deb;
+fi;
 
-    echo "Pacotes removidos com sucesso!";
+
+
+echo -e " \033[1;34m **Deseja configurar sua conta do github? (S/N)** \033[0m";
+read x
+
+if [[ "$x" == "S" ]] || [[ "$x" == "s" ]];
+    then
+
+    echo "DIGITE O E-MAIL DA SUA CONTA NO GIT";
+    read email;
+    echo "DIGITE SEU NOME";
+    read nome;
+    git config --global user.email "$email";
+    git config --global user.name "$nome";
+    clear;
+
+    echo -e " \033[1;33m  **COPIE ESTA CHAVE E ADICIONE NA SUA CONTA NO GITHUB**\033[0m";
+    echo "";
+    #cat /home/$USER/.ssh/*.pub;
+    find /home/$USER/.ssh -name '*.pub' -exec cat {} \;
+    echo "";
+    echo -e " \033[1;33m No Github, vá em Settings, SSH and GPG Keys, clique em New SSH Key, cole o conteúdo da chave e salve. \033[0m";
+
+fi;
+
 }
 
-echo "Deseja excluir os pacotes baixados durante a instalação? [S/n] [padrão: n]"
-read isDelete
-
-if [ "$isDelete" = "S" ] || [ "$isDelete" = "s" ]; then
-    deletarPacotes
-else
-    echo "Ignorando remoção de pacotes.";
-fi
 
 echo "Concluído!";
