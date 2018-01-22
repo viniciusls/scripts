@@ -1,12 +1,10 @@
 #!/bin/bash
-
+#Instala o gnome tweak tool (recomendado para distro que não vem com a ferramenta)
+#Instala os temas arc-flatabulous e numix,e os icones numix icon circle e flat-remix.
 	
 	echo "Instalando o gnome tweak tool"
 	sudo apt-get install gnome-tweak-tool -y;
 	
-	echo "Instalando o git"
-	sudo apt-get install git -y;
-
 	echo "Instalando numix-gtk-theme e numix icon circle"
 	sudo apt install numix-gtk-theme -y;
 	sudo add-apt-repository ppa:numix/ppa;
