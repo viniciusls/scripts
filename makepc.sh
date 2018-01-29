@@ -20,6 +20,10 @@ apt-get install openssh-client -y;
 
 #Instalando programas úteis.
 
+#Instalar o pv (Pipe Viewer)
+sudo apt-get install pv -y;
+echo "Você pode simular digitação na tela, como nos filmes" | pv -qL 10;
+
 echo "Instalando o git"
 sudo apt-get install git -y;
 
