@@ -104,6 +104,24 @@ gsettings set org.gnome.nautilus.preferences default-sort-order type
 #Configurando o .bashrc
 curl -L https://raw.githubusercontent.com/jeanrafaellourenco/scripts/master/bashrc > .bashrc
 
+#ESPECIFICANDO VALOR PERMANENTE DO SWAP VIA SYSCTL.CONF
+#Deixar 'swappiness' com valor minimo =1.
+
+sudo swapoff -a;
+
+echo '''
+
+#Tweak those values to alter disk syncing and swap behavior.
+#vm.vfs_cache_pressure = 100
+#vm.laptop_mode = 0
+vm.swappiness = 10
+#
+
+''' >> /etc/sysctl.conf;
+
+sudo swapon -a;
+#end
+
 clear;
 echo -e " \033[1;34m **Deseja instalar temas e icones personalizado? (S/N)** \033[0m";
 read x 
