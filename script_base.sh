@@ -5,7 +5,7 @@
 #ips: deve ter um arquivo com esse nome contendo os ips a serem conectados.
 #comandos: deve ter um arquivo com esse nome contendo os comandos a serem executados.
 #O método abaixo utiliza chave publica/privada.
-#Para usar com parametro senha --> sshpass -p 'senha aqui' ssh -o StrictHostKeyChecking=no root@"$ip" "$(cat ./comandos)" 
+#Para usar com parametro senha --> sshpass -p 'senha aqui' ssh -o StrictHostKeyChecking=no $USER@$ip "$(cat ./comandos)" 
 
 
 ips=$(cat ./ips)
@@ -14,5 +14,5 @@ array_ips=($ips)
 for ip in ${array_ips[@]}
 do
 ssh-keygen -f "/home/$USER/.ssh/known_hosts" -R $ip
-ssh -t -o 'StrictHostKeyChecking no' -o ConnectTimeout=10 root@"$ip" "$(cat ./comandos)"
+ssh -t -o 'StrictHostKeyChecking no' -o ConnectTimeout=10 $USER@$ip "$(cat ./comandos)"
 done
