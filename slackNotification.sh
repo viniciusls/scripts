@@ -5,7 +5,6 @@
 # channel="nome_canal" por user="nome_usuario"
 # e \"channel\": \"#$channel\", por \"user\": \"@$user\",
 
-
 #Envia para um canal do Slack.
 channel="nome_canal"
 user_send="nome_usuario"
