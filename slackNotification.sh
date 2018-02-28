@@ -1,7 +1,10 @@
 #!/bin/bash
 #Autor: Jean Rafael Lourenço
 #script para notificação via webhook utilizando o Slack.
-#Quando o hook for para notificar usuario ao invés do grupo substituir as linhas 9 e 16:
+#Para enviar links na mensagem utilize ex: "Segue o link: <https://slack.com>"
+#Mencionar usuários ex: "*Precisa ser validado por: * <@username>"
+#Para hyperlinks ex: "A very important thing has occurred! <https://alert-system.com/alerts/1234|Click here> for details!"
+#Quando o hook for para notificar usuario ao invés do grupo substituir as linhas 12 e 19:
 # channel="nome_canal" por user="nome_usuario"
 # e \"channel\": \"#$channel\", por \"user\": \"@$user\",
 
